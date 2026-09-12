@@ -1,0 +1,22 @@
+#Manipulação e Análise de Dados
+pandas
+numpy
+
+#Machine Learning
+scikit-learn
+imbalanced-learn
+xgboost
+
+#Explicabilidade
+shap
+
+#Visualização
+matplotlib
+seaborn
+
+jupyter
+
+
+#A grande maioria dessas bibliotecas foram utilizadas nas aulas do curso pela Profa. Isadora Ferrão.
+
+#UTILIZE: pip install -r requirements.txt   PARA INSTALAR AS DEPENDÊNCIAS.
