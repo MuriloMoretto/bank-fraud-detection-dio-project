@@ -1,0 +1,17 @@
+Dataset:
+284.807 linhas
+31 colunas
+
+Valores Nulos: 0
+
+Tipos:
+30 colunas float64
+1 coluna int64
+
+Duplicatas: 1081
+
+Desbalanceamento:
+0 -- 284.315
+1 -- 492
+
+Ou seja, 492 transações fraudulentas.

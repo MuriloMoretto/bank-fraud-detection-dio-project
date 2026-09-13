@@ -1,27 +1,27 @@
-from src.data_preparation import load_data, prepare_data
-from src.feature_engineering import create_features
-from src.models import train_models
-from src.evaluation import evaluate_model
+from src.data_preparation import load_data
 
 
 def main():
-    print("Iniciando projeto de detecção de fraudes...")
+    df = load_data("data/creditcard.csv")
 
-    df = load_data()
+    print("Primeiras linhas:")
+    print(df.head())
 
-    df = create_features(df)
+    print("\nDimensões do dataset:")
+    print(df.shape)
 
-    X_train, X_test, y_train, y_test = prepare_data(df)
+    print("\nInformações do dataset:")
+    df.info()
 
-    models = train_models(X_train, y_train)
+    print("\nValores nulos:")
+    print(df.isnull().sum())
 
-    for name, model in models.items():
-        evaluate_model(
-            model,
-            X_test,
-            y_test,
-            name
-        )
+    print("\nDuplicatas:")
+    print(df.duplicated().sum())
+
+    print("\nDistribuição da variável Class:")
+    print(df["Class"].value_counts())
+
 
 if __name__ == "__main__":
     main()
