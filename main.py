@@ -4,7 +4,10 @@ from src.eda import (
     class_distribution,
     plot_class_distribution,
     amount_by_class,
-    plot_amount_by_class
+    plot_amount_by_class,
+    time_by_class,
+    duplicate_analysis,
+    duplicate_by_class
 )
 
 
@@ -16,6 +19,9 @@ def main():
     plot_class_distribution(df)
     amount_by_class(df)
     plot_amount_by_class(df)
+    time_by_class(df)
+    duplicate_analysis(df)
+    duplicate_by_class(df)
 
 
 if __name__ == "__main__":

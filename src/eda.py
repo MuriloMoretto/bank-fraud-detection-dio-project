@@ -33,3 +33,19 @@ def plot_amount_by_class(df):
     plt.ylabel("Valor da transação")
 
     plt.show()
+
+def time_by_class(df):
+    print("\nEstatísticas do Time por classe:")
+    print(df.groupby("Class")["Time"].describe())
+
+def duplicate_analysis(df):
+    duplicates = df.duplicated().sum()
+
+    print("\nAnálise de duplicatas:")
+    print(f"Quantidade de registros duplicados: {duplicates}")
+
+def duplicate_by_class(df):
+    duplicated_rows = df[df.duplicated(keep=False)]
+
+    print("\nDuplicatas por classe:")
+    print(duplicated_rows["Class"].value_counts())
