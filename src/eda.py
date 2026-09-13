@@ -20,3 +20,16 @@ def plot_class_distribution(df):
     plt.ylabel("Quantidade")
 
     plt.show()
+
+def amount_by_class(df):
+    print("\nEstatísticas do Amount por classe:")
+    print(df.groupby("Class")["Amount"].describe())
+
+def plot_amount_by_class(df):
+    sns.boxplot(data=df, x="Class", y="Amount")
+
+    plt.title("Distribuição do valor das transações por classe")
+    plt.xlabel("Classe")
+    plt.ylabel("Valor da transação")
+
+    plt.show()
