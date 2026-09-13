@@ -1,5 +1,5 @@
 from src.data_preparation import load_data
-from src.eda import descriptive_statistics, class_distribution
+from src.eda import descriptive_statistics, class_distribution, plot_class_distribution
 
 
 def main():
@@ -7,6 +7,7 @@ def main():
 
     descriptive_statistics(df)
     class_distribution(df)
+    plot_class_distribution(df)
 
 
 if __name__ == "__main__":
