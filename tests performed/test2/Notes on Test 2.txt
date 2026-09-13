@@ -1,0 +1,26 @@
+Neste 2º teste, estamos utilizando EDA (Análise Exploratória de Dados).
+
+No primeiro teste:
+
+Dimensões: 284.807 × 31
+Tipos das colunas
+Nenhum valor nulo
+1.081 duplicatas
+Distribuição da Class:
+0 - 284.315
+1 - 492
+
+No segundo teste:
+Adicionamos o "df.describe()".
+
+Transações		284.807
+Variáveis		31
+Valores nulos		0
+Duplicatas		1.081
+Fraudes			492
+Fraude			~0,17%
+Valor médio		~R$ 88,35
+Mediana do valor	R$ 22,00
+Maior transação		R$ 25.691,16
+
+* O método "describe" é utilizado para nos trazer estatísticas numéricas mais detalhadas.
