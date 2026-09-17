@@ -1,0 +1,10 @@
+Frequência das duplicatas:
+count
+2     611
+3      66
+4      81
+5      10
+6       1
+9       2
+18      2
+Name: count, dtype: int64

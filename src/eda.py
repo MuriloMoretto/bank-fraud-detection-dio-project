@@ -49,3 +49,33 @@ def duplicate_by_class(df):
 
     print("\nDuplicatas por classe:")
     print(duplicated_rows["Class"].value_counts())
+
+def duplicate_frequency(df):
+    duplicated_rows = df[df.duplicated(keep=False)]
+
+    frequencies = duplicated_rows.value_counts()
+
+    print("\nFrequência das duplicatas:")
+    print(frequencies.value_counts().sort_index())
+
+def most_repeated_transactions(df):
+    frequencies = df.value_counts()
+
+    print("\nTransações mais repetidas:")
+    print(frequencies[frequencies >= 9])
+
+def duplicate_impact(df):
+    df_without_duplicates = df.drop_duplicates()
+
+    removed = len(df) - len(df_without_duplicates)
+
+    fraud_original = df["Class"].sum()
+    fraud_without_duplicates = df_without_duplicates["Class"].sum()
+
+    print("\nImpacto das duplicatas:")
+    print(f"Registros originais: {len(df)}")
+    print(f"Registros após remoção: {len(df_without_duplicates)}")
+    print(f"Registros removidos: {removed}")
+    print(f"Fraudes originais: {fraud_original}")
+    print(f"Fraudes após remoção: {fraud_without_duplicates}")
+    print(f"Fraudes removidas: {fraud_original - fraud_without_duplicates}")

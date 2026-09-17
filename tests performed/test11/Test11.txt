@@ -1,0 +1,7 @@
+Impacto das duplicatas:
+Registros originais: 284807
+Registros após remoção: 283726
+Registros removidos: 1081
+Fraudes originais: 492
+Fraudes após remoção: 473
+Fraudes removidas: 19

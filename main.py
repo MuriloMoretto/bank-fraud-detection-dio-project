@@ -7,7 +7,10 @@ from src.eda import (
     plot_amount_by_class,
     time_by_class,
     duplicate_analysis,
-    duplicate_by_class
+    duplicate_by_class,
+    duplicate_frequency,
+    most_repeated_transactions,
+    duplicate_impact
 )
 
 
@@ -22,6 +25,9 @@ def main():
     time_by_class(df)
     duplicate_analysis(df)
     duplicate_by_class(df)
+    duplicate_frequency(df)
+    most_repeated_transactions(df)
+    duplicate_impact(df)
 
 
 if __name__ == "__main__":
