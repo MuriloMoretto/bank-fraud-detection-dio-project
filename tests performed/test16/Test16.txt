@@ -1,0 +1,14 @@
+Verificação final da qualidade dos dados:
+Linhas: 284807
+Colunas: 31
+
+Valores ausentes:
+0
+
+Duplicatas:
+1081
+
+Tipos de dados:
+float64    30
+int64       1
+Name: count, dtype: int64

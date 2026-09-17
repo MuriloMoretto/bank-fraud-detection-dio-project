@@ -10,7 +10,12 @@ from src.eda import (
     duplicate_by_class,
     duplicate_frequency,
     most_repeated_transactions,
-    duplicate_impact
+    duplicate_impact,
+    amount_outliers,
+    plot_time_distribution,
+    features_by_class,
+    correlation_with_class,
+    data_quality_check
 )
 
 
@@ -28,6 +33,11 @@ def main():
     duplicate_frequency(df)
     most_repeated_transactions(df)
     duplicate_impact(df)
+    amount_outliers(df)
+    plot_time_distribution(df)
+    features_by_class(df)
+    correlation_with_class(df)
+    data_quality_check(df)
 
 
 if __name__ == "__main__":

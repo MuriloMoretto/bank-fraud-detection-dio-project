@@ -1,0 +1,7 @@
+Análise de outliers do Amount:
+Q1: 5.60
+Q3: 77.16
+IQR: 71.56
+Limite inferior: -101.75
+Limite superior: 184.51
+Quantidade de outliers: 31904

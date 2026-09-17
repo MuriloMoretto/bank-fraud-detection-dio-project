@@ -79,3 +79,70 @@ def duplicate_impact(df):
     print(f"Fraudes originais: {fraud_original}")
     print(f"Fraudes após remoção: {fraud_without_duplicates}")
     print(f"Fraudes removidas: {fraud_original - fraud_without_duplicates}")
+
+def amount_outliers(df):
+    q1 = df["Amount"].quantile(0.25)
+    q3 = df["Amount"].quantile(0.75)
+
+    iqr = q3 - q1
+
+    lower_limit = q1 - 1.5 * iqr
+    upper_limit = q3 + 1.5 * iqr
+
+    outliers = df[
+        (df["Amount"] < lower_limit) |
+        (df["Amount"] > upper_limit)
+    ]
+
+    print("\nAnálise de outliers do Amount:")
+    print(f"Q1: {q1:.2f}")
+    print(f"Q3: {q3:.2f}")
+    print(f"IQR: {iqr:.2f}")
+    print(f"Limite inferior: {lower_limit:.2f}")
+    print(f"Limite superior: {upper_limit:.2f}")
+    print(f"Quantidade de outliers: {len(outliers)}")
+
+def plot_time_distribution(df):
+    plt.figure(figsize=(10, 5))
+
+    sns.histplot(
+        data=df,
+        x="Time",
+        hue="Class",
+        bins=50,
+        element="step",
+        stat="count"
+    )
+
+    plt.title("Distribuição das transações ao longo do tempo")
+    plt.xlabel("Tempo (segundos)")
+    plt.ylabel("Quantidade")
+
+    plt.show()
+
+def features_by_class(df):
+    features = [f"V{i}" for i in range(1, 29)]
+
+    print("\nMédia das variáveis V1-V28 por classe:")
+    print(df.groupby("Class")[features].mean().T)
+
+def correlation_with_class(df):
+    correlations = df.corr()["Class"].sort_values(ascending=False)
+
+    print("\nCorrelação das variáveis com Class:")
+    print(correlations)
+
+def data_quality_check(df):
+    print("\nVerificação final da qualidade dos dados:")
+
+    print(f"Linhas: {df.shape[0]}")
+    print(f"Colunas: {df.shape[1]}")
+
+    print("\nValores ausentes:")
+    print(df.isnull().sum().sum())
+
+    print("\nDuplicatas:")
+    print(df.duplicated().sum())
+
+    print("\nTipos de dados:")
+    print(df.dtypes.value_counts())
