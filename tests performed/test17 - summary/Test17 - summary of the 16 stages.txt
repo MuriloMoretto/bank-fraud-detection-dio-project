@@ -1,0 +1,42 @@
+"Teste" 17 - Resumo do EDA.
+
+Após a execução dos 16 testes até aqui, as conclusões consolidadas são:
+
+-Dataset:
+284.807 transações
+31 variáveis
+492 fraudes
+284.315 transações normais
+
+A fraude representa aproximadamente 0,17% dos registros.
+
+
+
+-Qualidade:
+Valores ausentes: 0
+Duplicatas: 1081
+
+Não foi encontrado valores ausentes, mas duplicatas que precisarão ser avaliadas.
+
+
+
+-Amount (Pelo critério IOR):
+31.904 possíveis outliers
+
+Não serão removidos esses registros automaticamente, porque um valor extremo pode ser justamente uma informação útil para detectar uma fraude.
+
+
+
+-Time:
+A variável representa o tempo da transação dentro do período observado.
+
+Time = -0,012323
+
+Na correlação com Class:
+V17 = -0,326481
+V14 = -0,302544
+V12 = -0,260593
+V10 = -0,216883
+V16 = -0,196539
+V3  = -0,192961
+V7  = -0,187257
