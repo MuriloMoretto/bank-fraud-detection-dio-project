@@ -1,48 +1,63 @@
 # Detecção de Fraudes em Transações
 
-Projeto de Machine Learning desenvolvido em Python
-para identificação de transações potencialmente fraudulentas.
+Projeto de análise de dados desenvolvido em Python com foco na exploração e compreensão de um conjunto de dados de transações bancárias, buscando identificar características associadas às transações fraudulentas.
 
 ## Objetivo
 
-Desenvolver um modelo de classificação capaz de identificar
-transações fraudulentas em um conjunto de dados desbalanceado.
+O objetivo inicial do projeto é realizar uma Análise Exploratória de Dados (EDA) sobre um conjunto de transações bancárias, investigando:
 
-## Técnicas Utilizadas
+- Estrutura e qualidade dos dados;
+- Distribuição das classes;
+- Desbalanceamento entre transações normais e fraudulentas;
+- Distribuição dos valores das transações;
+- Distribuição temporal das transações;
+- Registros duplicados;
+- Possíveis outliers;
+- Comportamento das variáveis anonimizadas `V1` a `V28`;
+- Correlação das variáveis com a classe de fraude.
 
-- Análise exploratória
-- Feature Engineering
-- StandardScaler
-- Train/Test Split
-- SMOTE
-- Logistic Regression
-- Random Forest
-- XGBoost
-- GridSearchCV
-- SHAP
+A análise serve como etapa inicial para compreender o conjunto de dados e identificar pontos que deverão ser considerados em uma futura etapa de modelagem de Machine Learning.
 
-## Métricas
+## Tecnologias e Bibliotecas
 
-- Precision
-- Recall
-- F1-Score
-- ROC-AUC
-- Matriz de Confusão
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
 
-## Estrutura do projeto
+## Dataset
 
+Foi utilizado o dataset **Credit Card Fraud Detection**, disponibilizado no Kaggle.
 
-## Como executar
+O conjunto de dados contém:
 
+- **284.807 transações**
+- **31 colunas**
+- **492 transações fraudulentas**
+- **284.315 transações normais**
 
-## Resultados
+A variável `Class` representa a classificação da transação:
 
+- `0` → transação normal
+- `1` → transação fraudulenta
 
-## Interpretabilidade
+As variáveis `V1` a `V28` são variáveis anonimizadas resultantes de uma transformação por PCA. Por esse motivo, não é possível atribuir diretamente um significado de negócio individual a cada uma delas.
 
-## Sobre o Projeto
+A variável `Amount` representa o valor da transação e `Time` representa o tempo decorrido desde a primeira transação registrada no conjunto de dados.
 
-Projeto requerido pela DIO, no "Bootcamp Bradesco - GenAI, Dados & Cyber". Unidade: "Análise de Dados com
-Python: Da Preparação à Aplicação com Segurança". Desafio de Projeto: "Detecção de Anomalias em Transações em Python".
+> **Fonte:** Kaggle — Credit Card Fraud Detection  
+> https://www.kaggle.com/mlg-ulb/creditcardfraud
 
-Produzido e Arquitetado por Murilo Moretto.
+## Análise Exploratória de Dados
+
+A EDA foi realizada utilizando Pandas, Matplotlib e Seaborn.
+
+### 1. Estrutura dos dados
+
+O dataset possui:
+
+```text
+Linhas: 284.807
+Colunas: 31
